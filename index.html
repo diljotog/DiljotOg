@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>DILJOT HUNI 07 | Diljot - Mani</title>
+
+<meta name="description" content="DILJOT HUNI 07 — Software Developer and Cybersecurity Enthusiast from Punjab, India.">
+<meta name="robots" content="index, follow">
+
+<style>
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+    margin:0;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:22px;
+
+    background:
+    radial-gradient(circle at 50% -15%,#ff174526,transparent 32%),
+    radial-gradient(circle at 0% 100%,#795cff18,transparent 32%),
+    radial-gradient(circle at 100% 50%,#ff304d12,transparent 28%),
+    #020204;
+
+    color:#fff;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+/* MAIN CARD */
+
+.card{
+    position:relative;
+    width:100%;
+    max-width:760px;
+    padding:2px;
+    border-radius:32px;
+
+    background:
+    conic-gradient(
+        from 0deg,
+        #ff304d,
+        #17171c,
+        #795cff,
+        #17171c,
+        #ff304d
+    );
+
+    background-size:200% 200%;
+    animation:borderMove 7s linear infinite;
+
+    box-shadow:
+    0 0 0 1px #ffffff0d,
+    0 35px 120px #000,
+    0 0 100px #ff304d16;
+}
+
+@keyframes borderMove{
+    0%{background-position:0 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0 50%}
+}
+
+.card::after{
+    content:"";
+    position:absolute;
+    inset:-2px;
+    border-radius:34px;
+
+    background:
+    linear-gradient(
+        120deg,
+        transparent 30%,
+        #ffffff20 50%,
+        transparent 70%
+    );
+
+    background-size:250% 100%;
+    animation:borderFlash 5s ease-in-out infinite;
+
+    pointer-events:none;
+}
+
+@keyframes borderFlash{
+    0%,20%{background-position:-150% 0}
+    70%,100%{background-position:150% 0}
+}
+
+/* INNER */
+
+.inner{
+    position:relative;
+    z-index:2;
+
+    padding:36px;
+    border-radius:30px;
+
+    background:
+    radial-gradient(circle at 100% 0%,#795cff14,transparent 30%),
+    radial-gradient(circle at 0% 100%,#ff304d0c,transparent 30%),
+    #08080c;
+
+    overflow:hidden;
+
+    box-shadow:
+    inset 0 1px #ffffff08;
+}
+
+.inner::after{
+    content:"";
+    position:absolute;
+
+    top:-20%;
+    left:-80%;
+
+    width:45%;
+    height:140%;
+
+    background:
+    linear-gradient(
+        90deg,
+        transparent,
+        #ffffff08,
+        #ff526815,
+        #ffffff06,
+        transparent
+    );
+
+    transform:skewX(-18deg);
+
+    animation:lightSweep 6s ease-in-out infinite;
+
+    pointer-events:none;
+}
+
+@keyframes lightSweep{
+    0%,20%{left:-80%}
+    70%,100%{left:150%}
+}
+
+/* TAG */
+
+.tag{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+
+    padding:8px 13px;
+
+    border-radius:999px;
+
+    background:#ffffff07;
+    border:1px solid #ffffff12;
+
+    color:#aaa;
+
+    font-size:10px;
+    font-weight:bold;
+    letter-spacing:2px;
+
+    box-shadow:
+    inset 0 1px #ffffff0b,
+    0 0 20px #ffffff04;
+}
+
+.tag::before{
+    content:"";
+
+    width:6px;
+    height:6px;
+
+    border-radius:50%;
+
+    background:#4af08b;
+
+    box-shadow:
+    0 0 7px #4af08b,
+    0 0 18px #4af08b;
+
+    animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+    50%{
+        transform:scale(1.7);
+        opacity:.45;
+    }
+}
+
+/* TITLE */
+
+h1{
+    margin:25px 0 9px;
+
+    font-size:clamp(42px,9vw,72px);
+    line-height:.9;
+
+    letter-spacing:-4px;
+    font-weight:900;
+
+    background:
+    linear-gradient(
+        100deg,
+        #fff,
+        #ff5268 40%,
+        #a88cff 72%,
+        #fff
+    );
+
+    background-size:250%;
+
+    color:transparent;
+
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    animation:titleMove 5s linear infinite;
+}
+
+@keyframes titleMove{
+    to{background-position:250%}
+}
+
+/* TYPING */
+
+.subtitle{
+    color:#777;
+    font-size:13px;
+
+    min-height:22px;
+
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.subtitle .brand{
+    color:#ff5268;
+    font-weight:bold;
+}
+
+#dynamicText{
+    display:inline-block;
+
+    color:#ff5268;
+
+    font-weight:bold;
+
+    min-width:190px;
+
+    text-shadow:
+    0 0 10px #ff304d45;
+
+    white-space:nowrap;
+}
+
+#dynamicText::after{
+    content:"";
+
+    display:inline-block;
+
+    width:2px;
+    height:15px;
+
+    margin-left:5px;
+
+    vertical-align:-2px;
+
+    background:#ff5268;
+
+    box-shadow:
+    0 0 8px #ff5268;
+
+    animation:cursorBlink .7s infinite;
+}
+
+@keyframes cursorBlink{
+    0%,45%{opacity:1}
+    46%,100%{opacity:0}
+}
+
+/* LINE */
+
+.line{
+    height:1px;
+
+    margin:28px 0;
+
+    background:
+    linear-gradient(
+        90deg,
+        transparent,
+        #ff526855,
+        #795cff55,
+        transparent
+    );
+
+    box-shadow:
+    0 0 14px #ff304d20;
+}
+
+/* INFO */
+
+.info{
+    display:grid;
+    gap:11px;
+
+    position:relative;
+    z-index:3;
+}
+
+.row{
+    padding:15px 17px;
+
+    border-radius:15px;
+
+    background:
+    linear-gradient(
+        145deg,
+        #ffffff08,
+        #ffffff02
+    );
+
+    border:1px solid #ffffff0d;
+
+    backdrop-filter:blur(10px);
+
+    transition:.3s ease;
+}
+
+.row:hover{
+    transform:translateY(-3px);
+
+    border-color:#ff526830;
+
+    box-shadow:
+    0 12px 30px #0007,
+    0 0 25px #ff304d08;
+}
+
+.label{
+    display:block;
+
+    color:#777;
+
+    font-size:10px;
+
+    margin-bottom:6px;
+
+    text-transform:uppercase;
+
+    letter-spacing:.13em;
+}
+
+.value{
+    color:#eee;
+    font-size:15px;
+}
+
+/* ABOUT */
+
+.about{
+    margin-top:30px;
+
+    display:grid;
+    gap:15px;
+
+    position:relative;
+    z-index:3;
+}
+
+.about-box{
+    position:relative;
+
+    padding:20px;
+
+    border-radius:19px;
+
+    background:
+    linear-gradient(
+        145deg,
+        #ffffff08,
+        #ffffff02
+    );
+
+    border:1px solid #ffffff0d;
+
+    backdrop-filter:blur(12px);
+
+    box-shadow:
+    inset 0 1px #ffffff05,
+    0 15px 35px #0005;
+
+    overflow:hidden;
+
+    transition:.3s ease;
+}
+
+.about-box::before{
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    top:0;
+
+    width:2px;
+    height:100%;
+
+    background:
+    linear-gradient(
+        #ff5268,
+        #795cff
+    );
+
+    box-shadow:
+    0 0 15px #ff5268;
+}
+
+.about-box:hover{
+    transform:translateY(-4px);
+
+    border-color:#ff526835;
+
+    box-shadow:
+    0 18px 45px #0008,
+    0 0 30px #ff304d08;
+}
+
+/* ICON */
+
+.about-title{
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    margin-bottom:13px;
+
+    font-size:17px;
+    font-weight:bold;
+}
+
+.about-icon{
+    width:44px;
+    height:44px;
+
+    flex-shrink:0;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:13px;
+
+    color:#ff667c;
+
+    background:
+    linear-gradient(
+        145deg,
+        #25252a,
+        #111114
+    );
+
+    border:1px solid #38383e;
+
+    box-shadow:
+    inset 0 1px #ffffff15,
+    0 8px 25px #0008,
+    0 0 22px #ff304d0b;
+
+    transition:.35s ease;
+}
+
+.about-icon svg{
+    width:21px;
+    height:21px;
+
+    fill:none;
+
+    stroke:currentColor;
+
+    stroke-width:1.7;
+
+    stroke-linecap:round;
+    stroke-linejoin:round;
+
+    filter:
+    drop-shadow(
+        0 0 7px currentColor
+    );
+}
+
+.about-title:hover .about-icon{
+    transform:
+    translateY(-4px)
+    scale(1.08);
+
+    color:#fff;
+
+    border-color:#ff667c88;
+
+    box-shadow:
+    inset 0 1px #ffffff20,
+    0 10px 30px #0009,
+    0 0 30px #ff304d25;
+}
+
+/* TEXT */
+
+.about-text{
+    color:#999;
+
+    font-size:13px;
+
+    line-height:1.85;
+}
+
+.about-text strong{
+    color:#eee;
+}
+
+/* SKILLS */
+
+.interests{
+    margin-top:13px;
+
+    display:flex;
+    flex-wrap:wrap;
+    gap:7px;
+}
+
+.skill{
+    padding:7px 10px;
+
+    border-radius:8px;
+
+    background:#19191d;
+
+    border:1px solid #2d2d32;
+
+    color:#aaa;
+
+    font-size:11px;
+
+    transition:.25s ease;
+}
+
+.skill:hover{
+    color:#fff;
+
+    border-color:#ff526850;
+
+    background:#222027;
+
+    transform:translateY(-2px);
+
+    box-shadow:
+    0 0 15px #ff304d0c;
+}
+
+/* SECURITY */
+
+.security{
+    border-color:#294332;
+
+    background:
+    linear-gradient(
+        145deg,
+        #111a14,
+        #0d110f
+    );
+}
+
+.security .about-icon{
+    color:#4af08b;
+
+    border-color:#294a35;
+
+    background:#111d16;
+}
+
+.security::before{
+    background:
+    linear-gradient(
+        #4af08b,
+        #187c43
+    );
+
+    box-shadow:
+    0 0 15px #4af08b;
+}
+
+/* MISSION */
+
+.mission{
+    border-color:#463b23;
+
+    background:
+    linear-gradient(
+        145deg,
+        #1b1810,
+        #11100c
+    );
+}
+
+.mission .about-icon{
+    color:#e7c46a;
+
+    border-color:#4a4028;
+
+    background:#211d12;
+}
+
+.mission::before{
+    background:
+    linear-gradient(
+        #e7c46a,
+        #8c6d27
+    );
+
+    box-shadow:
+    0 0 15px #e7c46a;
+}
+
+/* CONTACTS */
+
+.contacts{
+    display:grid;
+    gap:10px;
+}
+
+.contact{
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    padding:13px;
+
+    border-radius:13px;
+
+    background:#151519;
+
+    border:1px solid #24242a;
+
+    color:#ddd;
+
+    text-decoration:none;
+
+    transition:.3s ease;
+}
+
+.contact:hover{
+    transform:translateX(5px);
+
+    background:#1d1d22;
+
+    border-color:#444;
+
+    box-shadow:
+    0 10px 25px #0007;
+}
+
+.contact-icon{
+    width:36px;
+    height:36px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:10px;
+
+    background:#202025;
+
+    border:1px solid #303038;
+}
+
+.contact-icon svg{
+    width:19px;
+    height:19px;
+
+    fill:none;
+
+    stroke:currentColor;
+
+    stroke-width:1.7;
+
+    stroke-linecap:round;
+    stroke-linejoin:round;
+}
+
+.whatsapp{color:#4ade80}
+.instagram{color:#ff6b9a}
+.telegram{color:#55aaff}
+
+/* FOOTER */
+
+footer{
+    margin-top:28px;
+
+    padding-top:20px;
+
+    border-top:1px solid #ffffff0c;
+
+    color:#555;
+
+    font-size:9px;
+
+    text-align:center;
+
+    letter-spacing:.15em;
+
+    text-transform:uppercase;
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+    body{
+        padding:13px;
+    }
+
+    .inner{
+        padding:23px 17px;
+    }
+
+    h1{
+        font-size:45px;
+        letter-spacing:-3px;
+    }
+
+    .about-text{
+        font-size:12.5px;
+    }
+
+    .card{
+        border-radius:27px;
+    }
+
+    .inner{
+        border-radius:25px;
+    }
+
+    #dynamicText{
+        min-width:0;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- BACKGROUND MUSIC
+     Put music.mp3 in the same folder as index.html.
+     No visible ON/OFF button.
+-->
+<audio id="bgMusic" autoplay loop preload="auto">
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<main class="card">
+
+<div class="inner">
+
+<div class="tag">
+PUBLIC PROFILE
+</div>
+
+<h1>
+DILJOT HUNI 07
+</h1>
+
+<div class="subtitle">
+
+<span class="brand">
+DILJOT HUNI 07
+</span>
+
+&nbsp; • &nbsp;
+
+<span id="dynamicText">
+Software Developer
+</span>
+
+</div>
+
+<div class="line"></div>
+
+<!-- BASIC INFORMATION -->
+
+<section class="info">
+
+<div class="row">
+
+<span class="label">
+Name
+</span>
+
+<span class="value">
+Diljot Buttar
+</span>
+
+</div>
+
+<div class="row">
+
+<span class="label">
+Age
+</span>
+
+<span class="value">
+16+
+</span>
+
+</div>
+
+<div class="row">
+
+<span class="label">
+Location
+</span>
+
+<span class="value">
+Punjab, India
+</span>
+
+</div>
+
+<div class="row">
+
+<span class="label">
+Work
+</span>
+
+<span class="value">
+Software Developer & Cybersecurity Enthusiast
+</span>
+
+</div>
+
+<div class="row">
+
+<span class="label">
+Relationship
+</span>
+
+<span class="value">
+Now there is no one
+</span>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="about">
+
+<!-- INTRODUCTION -->
+
+<div class="about-box">
+
+<div class="about-title">
+
+<div class="about-icon">
+
+<svg viewBox="0 0 24 24">
+
+<circle cx="12" cy="12" r="8"/>
+
+<path d="M12 8v5"/>
+
+<path d="M12 16h.01"/>
+
+</svg>
+
+</div>
+
+Introduction
+
+</div>
+
+<div class="about-text">
+
+<strong>DILJOT HUNI 07</strong>
+is a young software developer and
+cybersecurity enthusiast from
+<strong>Punjab, India.</strong>
+
+Passionate about programming,
+low-level development, application
+security, and understanding how modern
+digital systems work.
+
+</div>
+
+</div>
+
+<!-- DEVELOPER -->
+
+<div class="about-box">
+
+<div class="about-title">
+
+<div class="about-icon">
+
+<svg viewBox="0 0 24 24">
+
+<path d="m8 9-4 3 4 3"/>
+
+<path d="m16 9 4 3-4 3"/>
+
+<path d="m14 5-4 14"/>
+
+</svg>
+
+</div>
+
+Developer
+
+</div>
+
+<div class="about-text">
+
+Building custom software, interfaces,
+developer tools, Android applications,
+and experimental projects.
+
+<div class="interests">
+
+<span class="skill">C</span>
+<span class="skill">C++</span>
+<span class="skill">ImGui</span>
+<span class="skill">LGL</span>
+<span class="skill">Java</span>
+<span class="skill">Python</span>
+<span class="skill">JavaScript</span>
+<span class="skill">HTML5</span>
+<span class="skill">CSS3</span>
+<span class="skill">Android</span>
+<span class="skill">Native Development</span>
+<span class="skill">Cybersecurity Research</span>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- CYBERSECURITY -->
+
+<div class="about-box security">
+
+<div class="about-title">
+
+<div class="about-icon">
+
+<svg viewBox="0 0 24 24">
+
+<path d="M12 3 20 6v5c0 5-3.2 8.4-8 10-4.8-1.6-8-5-8-10V6z"/>
+
+<path d="m8.5 12 2.2 2.2 4.8-5"/>
+
+</svg>
+
+</div>
+
+Cybersecurity
+
+</div>
+
+<div class="about-text">
+
+Vulnerability assessment, security
+research, defensive security, system
+hardening, security analysis and
+responsible penetration testing.
+
+</div>
+
+</div>
+
+<!-- MISSION -->
+
+<div class="about-box mission">
+
+<div class="about-title">
+
+<div class="about-icon">
+
+<svg viewBox="0 0 24 24">
+
+<circle cx="12" cy="12" r="8"/>
+
+<circle cx="12" cy="12" r="4"/>
+
+<path d="M12 4v3"/>
+<path d="M20 12h-3"/>
+<path d="M12 20v-3"/>
+<path d="M4 12h3"/>
+
+</svg>
+
+</div>
+
+Mission
+
+</div>
+
+<div class="about-text">
+
+Continuously improving programming,
+development, and security knowledge.
+
+Building secure, efficient, and
+user-friendly systems that make a
+positive impact.
+
+</div>
+
+</div>
+
+<!-- CONTACTS -->
+
+<div class="about-box">
+
+<div class="about-title">
+
+<div class="about-icon">
+
+<svg viewBox="0 0 24 24">
+
+<path d="M4 5h16v14H4z"/>
+
+<path d="m4 6 8 7 8-7"/>
+
+</svg>
+
+</div>
+
+Contacts
+
+</div>
+
+<div class="contacts">
+
+<!-- WHATSAPP -->
+
+<a
+class="contact whatsapp"
+href="https://wa.me/919876838032"
+target="_blank"
+rel="noopener noreferrer"
+>
+
+<span class="contact-icon">
+
+<svg viewBox="0 0 24 24">
+
+<path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5z"/>
+
+<path d="M8.5 8.5c.3 1.7 2 3.4 3.7 3.8"/>
+
+</svg>
+
+</span>
+
+<span>
+WhatsApp
+</span>
+
+</a>
+
+<!-- INSTAGRAM -->
+
+<a
+class="contact instagram"
+href="https://instagram.com/diljot_huni07"
+target="_blank"
+rel="noopener noreferrer"
+>
+
+<span class="contact-icon">
+
+<svg viewBox="0 0 24 24">
+
+<rect x="4" y="4" width="16" height="16" rx="4"/>
+
+<circle cx="12" cy="12" r="3.5"/>
+
+<path d="M17.5 6.7h.01"/>
+
+</svg>
+
+</span>
+
+<span>
+Instagram · @diljot_huni07
+</span>
+
+</a>
+
+<!-- TELEGRAM -->
+
+<a
+class="contact telegram"
+href="https://t.me/M4NI999"
+target="_blank"
+rel="noopener noreferrer"
+>
+
+<span class="contact-icon">
+
+<svg viewBox="0 0 24 24">
+
+<path d="m21 4-3 16-6-5 3 3-1-5-5-2z"/>
+
+<path d="m8 13 9-6"/>
+
+</svg>
+
+</span>
+
+<span>
+Telegram 
+</span>
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 DILJOT HUNI 07 · PUBLIC PROFILE
+
+</footer>
+
+</div>
+
+</main>
+
+
+<script>
+
+/* =========================
+   TYPING EFFECT
+========================= */
+
+const texts = [
+
+    "Software Developer",
+    "C / C++ Developer",
+    "ImGui Developer",
+    "LGL Developer",
+    "Java Developer",
+    "Python Developer",
+    "JavaScript Developer",
+    "Android Developer",
+    "Native Developer",
+    "UI/UX Developer",
+    "Cybersecurity Enthusiast",
+    "Security Researcher",
+    "Ethical Hacking Enthusiast",
+    "Digital Security Researcher",
+    "Low-Level Developer",
+    "Application Security Enthusiast",
+    "Software Development",
+    "Security Research"
+
+];
+
+const dynamicText =
+    document.getElementById("dynamicText");
+
+let textIndex = 0;
+let charIndex = 0;
+let deleting = false;
+
+function typeEffect(){
+
+    const currentText =
+        texts[textIndex];
+
+    if(!deleting){
+
+        dynamicText.textContent =
+            currentText.substring(
+                0,
+                charIndex + 1
+            );
+
+        charIndex++;
+
+        if(
+            charIndex ===
+            currentText.length
+        ){
+
+            deleting = true;
+
+            setTimeout(
+                typeEffect,
+                1700
+            );
+
+            return;
+        }
+
+    }else{
+
+        dynamicText.textContent =
+            currentText.substring(
+                0,
+                charIndex - 1
+            );
+
+        charIndex--;
+
+        if(charIndex === 0){
+
+            deleting = false;
+
+            textIndex++;
+
+            if(
+                textIndex >=
+                texts.length
+            ){
+
+                textIndex = 0;
+            }
+        }
+    }
+
+    setTimeout(
+        typeEffect,
+        deleting ? 45 : 85
+    );
+}
+
+typeEffect();
+
+
+/* =========================
+   BACKGROUND MUSIC
+========================= */
+
+const music =
+    document.getElementById("bgMusic");
+
+music.volume = 0.35;
+
+function startMusic(){
+
+    music.play().catch(
+        () => {}
+    );
+
+}
+
+document.addEventListener(
+    "click",
+    startMusic,
+    {once:true}
+);
+
+document.addEventListener(
+    "touchstart",
+    startMusic,
+    {once:true}
+);
+
+document.addEventListener(
+    "keydown",
+    startMusic,
+    {once:true}
+);
+
+</script>
+
+</body>
+</html>
